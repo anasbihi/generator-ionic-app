@@ -12,6 +12,7 @@ var copy = require('gulp-copy');
 var htmlmin = require('gulp-htmlmin');
 var htmlreplace = require('gulp-html-replace');
 var lodash = require('lodash');
+var ngAnnotate = require('gulp-ng-annotate');
 
 var execute = require('./gulp_scripts/execute.js');
 var config = require('./gulp_scripts/config.js');
@@ -140,6 +141,7 @@ gulp.task('concat-modules', function(done){
     config.root+'/modules/home/home.controller.js'
   ])
   .pipe(concat('modules.js'))
+  .pipe(ngAnnotate({single_quotes: true}))
   .pipe(gulp.dest(config.dist+'/js/'))
   .on('end', done);
 });
@@ -151,6 +153,7 @@ gulp.task('concat-app', function(done){
     config.root+'/js/app.i18n.js'
   ])
   .pipe(concat('app.js'))
+  .pipe(ngAnnotate({single_quotes: true}))
   .pipe(gulp.dest(config.dist+'/js/'))
   .on('end', done);
 });
@@ -190,17 +193,17 @@ gulp.task('app-build-ios', function(done){
 
 gulp.task('app-release-android',function(done){
   execute([
-      'cordova build android --release',
-      'jarsigner -verbose -sigalg SHA1withRSA -digestalg SHA1 -storepass '+config.storepass+' -keystore '+config.keystore+' '+config.apk+'/android-release-unsigned.apk '+config.name,
-      'mkdir '+config.releases,
-      config.sdkPath +'/zipalign -v 4 '+config.apk+'/android-release-unsigned.apk '+config.releases+'/'+config.name+'-'+config.version+'.apk',
+    'cordova build android --release',
+    'jarsigner -verbose -sigalg SHA1withRSA -digestalg SHA1 -storepass '+config.storepass+' -keystore '+config.keystore+' '+config.apk+'/android-release-unsigned.apk '+config.name,
+    'mkdir '+config.releases,
+    config.sdkPath +'/zipalign -v 4 '+config.apk+'/android-release-unsigned.apk '+config.releases+'/'+config.name+'-'+config.version+'.apk',
   ],done);
 });
 
 gulp.task('app-release-ios', function(done){
   execute([
-      'cordova build ios --release --device',
-      'mkdir '+config.releases,
-      'cp platforms/ios/build/device/*.ipa '+config.releases+'/'+config.name+'-v'+config.version+'.ipa'
+    'cordova build ios --release --device',
+    'mkdir '+config.releases,
+    'cp platforms/ios/build/device/*.ipa '+config.releases+'/'+config.name+'-v'+config.version+'.ipa'
   ],done);
 })
