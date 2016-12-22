@@ -1,0 +1,69 @@
+{
+  "name": "<%= appname %>",
+  "version": "<%= version %>",
+  "description": "<%= description %>",
+  "devDependencies": {
+    "bower": "^1.3.3",
+    "convert-source-map": "^1.3.0",
+    "dargs": "^5.1.0",
+    "each-async": "^1.1.1",
+    "gulp": "^3.5.6",
+    "gulp-autoprefixer": "^3.1.1",
+    "gulp-concat": "^2.2.0",
+    "gulp-copy": "^1.0.0",
+    "gulp-dest-clean": "^0.5.0",
+    "gulp-html-replace": "^1.6.2",
+    "gulp-htmlmin": "^3.0.0",
+    "gulp-minify-css": "^0.3.13",
+    "gulp-rename": "^1.2.2",
+    "gulp-ruby-sass": "^2.1.1",
+    "gulp-sass": "^2.0.4",
+    "gulp-uglify": "^2.0.0",
+    "gulp-usemin": "^0.3.26",
+    "gulp-util": "^2.2.20",
+    "jshint": "^2.9.4",
+    "jshint-stylish": "^2.2.1",
+    "lodash": "^4.17.2",
+    "mkdirp": "^0.5.1",
+    "object-assign": "^4.1.0",
+    "require-dir": "^0.3.1",
+    "rimraf": "^2.5.4",
+    "shelljs": "^0.5.1",
+    "slash": "^1.0.0",
+    "time-grunt": "^1.4.0",
+    "vinyl": "^2.0.1",
+    "xml2json": "^0.10.0"
+  },
+  "cordovaPlugins": [
+    "cordova-plugin-whitelist",
+    "cordova-plugin-console",
+    "cordova-plugin-statusbar",
+    "cordova-plugin-device",
+    "cordova-plugin-splashscreen",
+    "ionic-plugin-keyboard",
+    {
+      "locator": "https://github.com/NeoLSN/cordova-plugin-android-permission.git",
+      "id": "cordova-plugin-android-permissions"
+    },
+    {
+      "locator": "https://github.com/leecrossley/cordova-plugin-jailbreak-detection.git",
+      "id": "cordova-plugin-jailbreak-detection"
+    },
+    {
+      "locator": "https://github.com/trykovyura/cordova-plugin-root-detection.git",
+      "id": "cordova-plugin-root-detection"
+    }
+  ],
+  "cordovaPlatforms": [
+    {
+      "platform": "android",
+      "version": "",
+      "locator": "android"
+    },
+    {
+      "platform": "ios",
+      "version": "",
+      "locator": "ios"
+    }
+  ]
+}

@@ -1,3 +1,0 @@
-[submodule "generators/app/templates/custom-ionic-starter-app"]
-	path = generators/app/templates/custom-ionic-starter-app
-	url = https://github.com/anasbihi/custom-ionic-starter-app.git
