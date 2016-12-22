@@ -1,4 +1,6 @@
 var Generator = require('yeoman-generator');
+var chalk = require('chalk');
+var yosay = require('yosay');
 var lodash = require('lodash');
 var fs = require('fs-extra');
 var path = require('path');
@@ -42,6 +44,10 @@ module.exports = class extends Generator{
     }
   }
   prompting(){
+    this.log(yosay(
+      'Welcome to the stellar ' + chalk.red('generator-ionic-app') + ' generator!'
+    ));
+
     return this.prompt([{
       type    : 'input',
       name    : 'name',
@@ -113,8 +119,5 @@ module.exports = class extends Generator{
       npm: true,
       bower: true
     });
-  }
-  end(){
-
   }
 };
