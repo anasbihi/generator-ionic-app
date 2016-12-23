@@ -1,37 +1,54 @@
-## Welcome to GitHub Pages
+# A [Yeoman](http://yeoman.io) generator for Ionic Projects 
 
-You can use the [editor on GitHub](https://github.com/anasbihi/generator-ionic-app/edit/master/README.md) to maintain and preview the content for your website in Markdown files.
+This is a yeoman generator for my [Ionic app](https://github.com/anasbihi/generator-ionic-app), an Ionic app ready to use. It sets up everything to get you started with [Gulp](http://gulpjs.com/) and [Ionic](http://ionicframework.com/) in no time.
+Currently using Ionic 1.3.2 and Angular 1.5.10.
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
 
-### Markdown
+### Features
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+* Gulp jobs for development, building, emulating and running your app
+* Compiles and concatenates your Sass
+* Local development server with live reload, even inside android and ios emulators
+* Auto min-safe all Angular DI through `ng-annotate`, no need to use weird bracket notation
+* Easily customize Ionic styles from within your Sass
+* Comes already with a set of cordova plugins that are very helpful to produce robust mobile apps:
+	*  [cordova-plugin-android-permissions](https://github.com/NeoLSN/cordova-plugin-android-permission)
+	*  [cordova-plugin-jailbreak-detection](https://github.com/leecrossley/cordova-plugin-jailbreak-detection)
+	*  [cordova-plugin-root-detection](https://github.com/trykovyura/cordova-plugin-root-detection)
 
-```markdown
-Syntax highlighted code block
 
-# Header 1
-## Header 2
-### Header 3
+### Installation
 
-- Bulleted
-- List
+[![NPM](https://nodei.co/npm/generator-ionic-app.png?downloads=true)](https://nodei.co/npm/generator-ionic-app/)
 
-1. Numbered
-2. List
+You should have Yeoman installed globally
 
-**Bold** and _Italic_ and `Code` text
-
-[Link](url) and ![Image](src)
+```bash
+npm install -g yo
 ```
 
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
+To install generator-ionic-gulp from npm, run:
 
-### Jekyll Themes
+```bash
+npm install -g generator-ionic-app
+```
 
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/anasbihi/generator-ionic-app/settings). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
+Finally, initiate the generator:
 
-### Support or Contact
+```bash
+yo ionic-app
+```
 
-Having trouble with Pages? Check out our [documentation](https://help.github.com/categories/github-pages-basics/) or [contact support](https://github.com/contact) and we’ll help you sort it out.
+after installation, just start developing cool ionic apps!
+
+
+## Changelog
+
+#### 0.0.1
+* initial commit
+* building app skeleton
+
+
+## License
+
+MIT
