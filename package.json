@@ -1,6 +1,6 @@
 {
   "name": "generator-ionic-app",
-  "version": "0.0.4",
+  "version": "1.0.0",
   "description": "Generator for 'ready for CI' ionic mobile app",
   "main": "index.js",
   "files": [
