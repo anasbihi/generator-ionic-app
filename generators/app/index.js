@@ -35,8 +35,6 @@ module.exports = class extends Generator{
     });
   }
   _copy(src,dest){
-    this.log('sourcePth : '+ src);
-    this.log('destinationPath : '+ dest);
     try {
       fs.copySync(src, dest);
     } catch (err) {
