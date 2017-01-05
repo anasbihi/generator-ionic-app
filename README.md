@@ -1,4 +1,4 @@
-# A [Yeoman](http://yeoman.io) generator for Ionic Projects 
+# A [Yeoman](http://yeoman.io) generator for Ionic Projects
 
 This is a yeoman generator for my [Ionic app](https://github.com/anasbihi/generator-ionic-app), an Ionic app ready to use. It sets up everything to get you started with [Gulp](http://gulpjs.com/) and [Ionic](http://ionicframework.com/) in no time.
 Currently using Ionic 1.3.2 and Angular 1.5.10.
@@ -43,8 +43,9 @@ after installation, just start developing cool ionic apps!
 
 
 ## Changelog
-
-#### 0.0.1
+#### 1.0.1
+* more documentation for the gulp script
+#### 1.0.0
 * initial commit
 * building app skeleton
 
