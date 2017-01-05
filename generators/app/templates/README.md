@@ -23,6 +23,7 @@ please note that the translations JSON files should be named like the following 
 Contains images that will be used in the app
 ##### js folder
 Contains the app's main JavaScript files:
+
 - `app.js`  contains the dependency injections of all modules.
 - `app.config.js` contains the behaviour to perform at app startup
 - `app.i18n.js` contains the configuration of translation mechanism
@@ -32,6 +33,7 @@ Contains the app modules will be loaded. Basically, this folder will contains al
 > More documentation about the best practices will be written in the future.
 #### gulp_scripts
 the ``gulp_scripts/`` folder contains two files javaScript files:
+
 - ``config.js`` is a SSJS file that contains the following configuration:
 
 ```javascript
@@ -53,4 +55,17 @@ the ``gulp_scripts/`` folder contains two files javaScript files:
 >The only parameters that must be set up are:
 > - **sdkPath** path to the developer's Android SDK
 > - **storepass** the password of the certificate to use for signing android app's. click [here](https://developer.android.com/studio/publish/app-signing.html#signing-manually)  for more documentation.
-- ``execute.js`` is also a SSJS file that contains a function wich is used inside the app's``Gulpfile.js``
+
+- ``execute.js`` is also a SSJS file that contains a function wich is used inside the app's``Gulpfile.js``.
+
+#### resources folder
+this folder will contains the set of images that are automatically generated from one of the following commands
+```shell
+	ionic resources
+	ionic resources --icon
+	ionic resources --splash
+```
+>Please read the[ionic official documentation](http://ionicframework.com/docs/cli/icon-splashscreen.html).
+
+#### scss folder
+Contains the SCSS files that will be used to generate CSS.
