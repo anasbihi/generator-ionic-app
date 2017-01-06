@@ -41,10 +41,10 @@ yo ionic-app
 
 after installation, just start developing cool ionic apps!
 
-
 ## Changelog
+
 #### 1.0.1
-* more documentation for the gulp script
+* more documentation for the generated project
 #### 1.0.0
 * initial commit
 * building app skeleton
