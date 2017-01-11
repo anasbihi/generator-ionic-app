@@ -27,7 +27,7 @@ You should have Yeoman installed globally
 npm install -g yo
 ```
 
-To install generator-ionic-gulp from npm, run:
+To install generator-ionic-app from npm, run:
 
 ```bash
 npm install -g generator-ionic-app
@@ -42,14 +42,16 @@ yo ionic-app
 after installation, just start developing cool ionic apps!
 
 ## Changelog
+#### 1.1.1
+* Fix some errors on project description
+* Add an example of unit test for the generated project
 
 #### 1.0.1
 * more documentation for the generated project
+
 #### 1.0.0
 * initial commit
 * building app skeleton
 
-
 ## License
-
 MIT
