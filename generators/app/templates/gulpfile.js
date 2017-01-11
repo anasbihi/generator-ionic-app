@@ -116,15 +116,14 @@ gulp.task('concat-vendor', function(done){
     config.root+'/lib/angular/angular.js',
     config.root+'/lib/ionic/js/ionic.js',
     config.root+'/lib/ionic/js/ionic-angular.js',
-    config.root+'/lib/angular-sanitize/angular-sanitize.js"',
+    config.root+'/lib/angular-sanitize/angular-sanitize.js',
     config.root+'/lib/angular-ui-router/release/angular-ui-router.js',
     config.root+'/lib/angular-animate/angular-animate.js',
     config.root+'/lib/angular-translate/angular-translate.js',
     config.root+'/lib/angular-translate-storage-cookie/angular-translate-storage-cookie.js',
     config.root+'/lib/angular-translate-storage-local/angular-translate-storage-local.js',
     config.root+'/lib/angular-translate-loader-static-files/angular-translate-loader-static-files.js',
-    config.root+'/lib/angular-cookies/angular-cookies.js',
-    config.root+'/lib/angular-sanitize/angular-sanitize.js'
+    config.root+'/lib/angular-cookies/angular-cookies.js'
   ])
   .pipe(concat('vendor.js'))
   .pipe(gulp.dest(config.dist+'/js/'))
